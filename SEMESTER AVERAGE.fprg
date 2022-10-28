@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="nunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:19:43 AM"/>
+        <attribute name="created" value="bnVubmE7QVNSSVRBOzIwMjItMTAtMjg7MDk6MjQ6MjkgQU07MjI2OA=="/>
+        <attribute name="edited" value="bnVubmE7QVNSSVRBOzIwMjItMTAtMjg7MTA6MTk6NDMgQU07MzsyMzcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="STUDENT INFO "/>
+            <declare name="rollnumber" type="String" array="False" size=""/>
+            <output expression="&quot;enter your roll number&quot;" newline="True"/>
+            <input variable="rollnumber"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;enter your name&quot;" newline="True"/>
+            <input variable="name"/>
+            <declare name="address" type="String" array="False" size=""/>
+            <output expression="&quot;enter your address&quot;" newline="True"/>
+            <input variable="address"/>
+            <declare name="bloodgroup" type="String" array="False" size=""/>
+            <output expression="&quot;what is your bloood group&quot;" newline="True"/>
+            <input variable="bloodgroup"/>
+            <declare name="phonenumber" type="Integer" array="False" size=""/>
+            <output expression="&quot;give me your phonenumber daaaaa!&quot;" newline="True"/>
+            <input variable="phonenumber"/>
+            <declare name="department" type="String" array="False" size=""/>
+            <output expression="&quot;in which department are u assigned in?&quot;" newline="True"/>
+            <input variable="department"/>
+            <declare name="semester" type="Integer" array="False" size=""/>
+            <output expression="&quot;in which semester are u in currently&quot;" newline="True"/>
+            <input variable="semester"/>
+            <declare name="cybersubjectcode" type="String" array="False" size=""/>
+            <output expression="&quot;write your subject code for cyber security psat&quot;" newline="True"/>
+            <input variable="cybersubjectcode"/>
+            <declare name="physicssubjectcode" type="String" array="False" size=""/>
+            <output expression="&quot;write your physics subject code&quot;" newline="True"/>
+            <input variable="physicssubjectcode"/>
+            <declare name="culturalsubjectcode" type="String" array="False" size=""/>
+            <output expression="&quot;write your cultural education subject code&quot;" newline="True"/>
+            <input variable="culturalsubjectcode"/>
+            <declare name="cybermarks" type="Real" array="False" size=""/>
+            <output expression="&quot;what are your cyber amrks in periodical 1&quot;" newline="True"/>
+            <input variable="cybermarks"/>
+            <declare name="phymarks" type="Real" array="False" size=""/>
+            <output expression="&quot;what are your physics marks in periodical 1&quot;" newline="True"/>
+            <input variable="phymarks"/>
+            <declare name="culturalmarks" type="Real" array="False" size=""/>
+            <output expression="&quot;write down your marks in cultural educatio in periodical 1&quot;" newline="True"/>
+            <input variable="culturalmarks"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <comment text="TOTAL IS CALUCUALTED&#13;&#10;"/>
+            <assign variable="total" expression="cybermarks+phymarks+culturalmarks"/>
+            <output expression="&quot;the total marks in your periodical 1 are &quot; &amp; total" newline="True"/>
+            <declare name="average" type="Integer" array="False" size=""/>
+            <comment text="AVERAGE CALUCULATED"/>
+            <assign variable="average" expression="(cybermarks+phymarks+culturalmarks)/3"/>
+            <output expression="&quot;the average of your marks in periodical 1 is &quot; &amp; average" newline="True"/>
+            <output expression="&quot;your name is &quot; &amp; name &amp;&#13;&#10;&quot;your total marks are &quot; &amp; total &amp;&#13;&#10;&quot;your average is &quot; &amp; average" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
