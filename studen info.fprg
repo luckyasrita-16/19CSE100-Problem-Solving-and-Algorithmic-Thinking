@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="nunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 09:46:05 AM"/>
+        <attribute name="created" value="bnVubmE7QVNSSVRBOzIwMjItMTAtMjg7MDk6MjQ6MjkgQU07MjI2OA=="/>
+        <attribute name="edited" value="bnVubmE7QVNSSVRBOzIwMjItMTAtMjg7MDk6NDY6MDUgQU07MjsyMzc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollnumber" type="String" array="False" size=""/>
+            <output expression="&quot;enter your roll number&quot;" newline="True"/>
+            <input variable="rollnumber"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;enter your name&quot;" newline="True"/>
+            <input variable="name"/>
+            <declare name="address" type="String" array="False" size=""/>
+            <output expression="&quot;enter your address&quot;" newline="True"/>
+            <input variable="address"/>
+            <declare name="bloodgroup" type="String" array="False" size=""/>
+            <output expression="&quot;what is your bloood group&quot;" newline="True"/>
+            <input variable="bloodgroup"/>
+            <declare name="phonenumber" type="Integer" array="False" size=""/>
+            <output expression="&quot;give me your phonenumber daaaaa!&quot;" newline="True"/>
+            <input variable="phonenumber"/>
+            <declare name="department" type="String" array="False" size=""/>
+            <output expression="&quot;in which department are u assigned in?&quot;" newline="True"/>
+            <input variable="department"/>
+            <output expression="&quot;the name is &quot; &amp; name" newline="True"/>
+            <output expression="&quot;the rollnumber is  &quot; &amp;  rollnumber" newline="True"/>
+            <output expression="&quot;the address is &quot; &amp;  address" newline="True"/>
+            <output expression="&quot;the bloodgroup  is&quot; &amp;  bloodgroup" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
