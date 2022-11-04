@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="placement"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:40:59 AM"/>
+        <attribute name="created" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MTA6MjY6MjQgQU07MzAwOA=="/>
+        <attribute name="edited" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MTA6NDA6NTkgQU07MTszMTIw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="DECLARING VARIABLES"/>
+            <declare name="DIVISOR, DIVIDEND, QUOTIENT, REMAINDER" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE NUMBER WITH WHICH U WILL DIVIDE&quot;" newline="True"/>
+            <input variable="DIVISOR"/>
+            <output expression="&quot;ENTER THE NUMBER U WANT TO DIVIDE&quot;" newline="True"/>
+            <input variable="DIVIDEND"/>
+            <comment text="QUOTIENT IS BEING CALUCUALTED"/>
+            <assign variable="QUOTIENT" expression="DIVIDEND /DIVISOR"/>
+            <comment text="REMAINDER IS CALUCULATED"/>
+            <assign variable="REMAINDER" expression="DIVIDEND-(DIVISOR*QUOTIENT)"/>
+            <output expression="&quot;THE REMAINDER WHEN DIVIDED THE DIVIDEND WITH DIVISOR IS &quot; &amp; REMAINDER" newline="True"/>
+            <comment text="REMAINDER IS SHOWN"/>
+        </body>
+    </function>
+</flowgorithm>

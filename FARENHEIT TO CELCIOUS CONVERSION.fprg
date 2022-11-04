@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="placement"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:43:34 AM"/>
+        <attribute name="created" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MDk6NTM6MDIgQU07MzAxMg=="/>
+        <attribute name="edited" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MDk6NTM6MDcgQU07MTtwbGFjZW1lbnQ7MjAyMjIzTUFZQzAwNDY7MjAyMi0xMS0wNDswOToxMzowMyBBTTtDRUxDSU9VUyBUTyBGQVJFTkhFSVQgQ09OVkVSU0lPTi5mcHJnOzkwMjM="/>
+        <attribute name="edited" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MTA6NDM6MzQgQU07MzszMTE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="CELCIOUS" type="Real" array="False" size=""/>
+            <comment text="ENTER THE VALUE OF CELCIOUS"/>
+            <output expression="&quot;ENTER THE DEGREE CELCIOUS&quot;" newline="True"/>
+            <comment text="INPUT OF CELCIOUS IS TAKEN"/>
+            <input variable="CELCIOUS"/>
+            <declare name="FARENHEIT" type="Real" array="False" size=""/>
+            <comment text="CELCIOUS IS CONVERTED TO FARENHEIT"/>
+            <assign variable="celcious" expression="((farenheit-32)*5)/9"/>
+            <output expression="&quot;THE VALUE OF CELCIOUS IS &quot; &amp; CELCIOUS" newline="True"/>
+            <comment text="OUTPUT IS SHOWED"/>
+        </body>
+    </function>
+</flowgorithm>

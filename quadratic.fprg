@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="placement"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:16:44 AM"/>
+        <attribute name="created" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MDk6MzA6NDUgQU07MzAxNA=="/>
+        <attribute name="edited" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MTA6MTY6NDQgQU07MzszMTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <comment text="COEFFICIENTS ARE DECLARED"/>
+            <output expression="&quot;ENTER THE COEFFICIENT OF 2ND DEGREE CO EFFICIENT&quot;" newline="True"/>
+            <input variable="A"/>
+            <output expression="&quot;ENTER THE COEFFIENT OF X&quot;" newline="True"/>
+            <input variable="B"/>
+            <output expression="&quot;ENTER THE CONSTANT&quot;" newline="True"/>
+            <input variable="C"/>
+            <comment text="INPUTS ARE TAKEN"/>
+            <declare name="ROOT1" type="Integer" array="False" size=""/>
+            <comment text="root 1 is being calculated"/>
+            <assign variable="ROOT1" expression="(-B+(sqrt(B^2-4*A*C)))/2*A"/>
+            <output expression="&quot;the root1 of thois quadratic equation is &quot;  &amp;  root1" newline="True"/>
+            <declare name="root2" type="Real" array="False" size=""/>
+            <comment text="root 2 is being caluculated"/>
+            <assign variable="ROOT2" expression="(-B-(sqrt(B^2-4*A*C)))/2*A"/>
+            <output expression="&quot;the root2 is&quot; &amp; root2" newline="True"/>
+            <comment text="both roots are shown"/>
+        </body>
+    </function>
+</flowgorithm>

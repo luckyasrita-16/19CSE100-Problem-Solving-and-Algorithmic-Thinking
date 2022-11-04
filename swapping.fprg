@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="placement"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:13:52 AM"/>
+        <attribute name="created" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MDk6NTY6MTkgQU07MzAyMw=="/>
+        <attribute name="edited" value="cGxhY2VtZW50OzIwMjIyM01BWUMwMDQ2OzIwMjItMTEtMDQ7MTA6MTM6NTIgQU07MTszMTEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Real" array="False" size=""/>
+            <declare name="B" type="Real" array="False" size=""/>
+            <comment text="decl;aring the values a and b "/>
+            <output expression="&quot;ENTER THE VALUE OF A&quot;" newline="True"/>
+            <input variable="A"/>
+            <comment text="giving the input a"/>
+            <output expression="&quot;ENTER THE VALUE OF B&quot;" newline="True"/>
+            <input variable="B"/>
+            <comment text="giving the input b"/>
+            <comment text="swapping numbers"/>
+            <output expression="&quot; THE VALUE OF A after swapping IS &quot; &amp; B" newline="True"/>
+            <output expression="&quot;THE VALUE OF B AFTER SWApping IS &quot;&amp; A" newline="True"/>
+            <comment text="the value of two numbers is shown after swapping"/>
+            <input variable="A"/>
+        </body>
+    </function>
+</flowgorithm>
