@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 09:45:56 AM"/>
+        <attribute name="created" value="c3R1ZGVudDsyMDIyMjNNQVlDMDA0NjsyMDIyLTExLTE4OzA5OjA3OjQ2IEFNOzI4NDY="/>
+        <attribute name="edited" value="c3R1ZGVudDsyMDIyMjNNQVlDMDA0NjsyMDIyLTExLTE4OzA5OjQ1OjU2IEFNOzE7Mjk1Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;welcome to karur vysya bank&quot;" newline="True"/>
+            <output expression="&quot;please insert your card&quot;" newline="True"/>
+            <declare name="accno" type="Integer" array="False" size=""/>
+            <output expression="&quot;please enter your account number&quot;" newline="True"/>
+            <input variable="accno"/>
+            <declare name="balance" type="Integer" array="False" size=""/>
+            <assign variable="balance" expression="800"/>
+            <declare name="amount" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the amount you want to withdrawl&quot;" newline="True"/>
+            <input variable="amount"/>
+            <if expression="amount&gt;=500">
+                <then>
+                    <declare name="atmpin" type="Integer" array="False" size=""/>
+                    <output expression="&quot;enter your 4 digit pin number&quot;" newline="True"/>
+                    <input variable="atmpin"/>
+                    <if expression="atmpin=2418">
+                        <then>
+                            <declare name="leftoutbalance" type="Integer" array="False" size=""/>
+                            <assign variable="leftoutbalance" expression="balance-amount"/>
+                            <output expression="&quot;The remaining balance in your account is &quot; &amp;&#13;&#10;leftoutbalance" newline="True"/>
+                            <input variable="leftoutbalance"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;false pin number&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;no min balance&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
