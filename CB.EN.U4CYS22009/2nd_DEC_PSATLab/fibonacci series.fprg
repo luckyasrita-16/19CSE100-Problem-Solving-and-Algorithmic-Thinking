@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22012"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:32:33 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIyLTEyLTAyOzEwOjEyOjMwIEFNOzMwNDM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIyLTEyLTAyOzEwOjMyOjMzIEFNOzE7MzE1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="variables are declared"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="number1" type="Integer" array="False" size=""/>
+            <declare name="number2" type="Integer" array="False" size=""/>
+            <assign variable="number1" expression="0"/>
+            <assign variable="number2" expression="1"/>
+            <comment text="number of times the fibonaci series is done is taken as input&#13;&#10;"/>
+            <output expression="&quot;enter the number&quot;" newline="True"/>
+            <input variable="count"/>
+            <comment text="printing first value"/>
+            <output expression="number1" newline="True"/>
+            <while expression="count&gt;0">
+                <comment text="printing second value&#13;&#10;"/>
+                <output expression="number2" newline="True"/>
+                <comment text="numbers are changed as per the series"/>
+                <assign variable="number2" expression="number1+number2"/>
+                <assign variable="number1" expression="number2-number1"/>
+                <assign variable="count" expression="count-1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

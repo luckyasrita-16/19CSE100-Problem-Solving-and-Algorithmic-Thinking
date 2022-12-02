@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22012"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:02:59 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIyLTEyLTAyOzA5OjU0OjI5IEFNOzMwNjU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIyLTEyLTAyOzEwOjAyOjU5IEFNOzE7MzE2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="variables are declared"/>
+            <declare name="sum, count" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number u want to be added&quot;" newline="True"/>
+            <comment text="input is taken for the number"/>
+            <input variable="count"/>
+            <assign variable="sum" expression="0"/>
+            <while expression="count&gt;0">
+                <comment text="sum is being calculted"/>
+                <assign variable="sum" expression="sum+count"/>
+                <assign variable="count" expression="count-1"/>
+            </while>
+            <comment text="output is shown&#13;&#10;"/>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

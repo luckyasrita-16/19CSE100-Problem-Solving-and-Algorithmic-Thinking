@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22012"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:48:23 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIyLTEyLTAyOzA5OjM3OjExIEFNOzMwNTc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxMjsyMDIyMjNNQVlDMDA0ODsyMDIyLTEyLTAyOzA5OjQ4OjIzIEFNOzE7MzE3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="VARIABLES ARE DECLARED"/>
+            <declare name="loop" type="Integer" array="False" size=""/>
+            <declare name="factorial" type="Integer" array="False" size=""/>
+            <comment text="QUESTION IS ASKED&#13;&#10;"/>
+            <output expression="&quot;enter the number you want to take factorial of &quot;" newline="True"/>
+            <comment text="INPUT IS TAKEN"/>
+            <input variable="loop"/>
+            <assign variable="factorial" expression="1"/>
+            <if expression="loop&gt;0">
+                <then>
+                    <while expression="loop&gt;0">
+                        <comment text="FACTORIAL IS CALCULATED"/>
+                        <assign variable="factorial" expression="factorial*loop"/>
+                        <assign variable="loop" expression="loop-1"/>
+                    </while>
+                    <comment text="FACTORIAL RESULT IS SHOWN"/>
+                    <output expression="&quot;Factorial = &quot; &amp; factorial" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;FACTORAIL IS NOT DEFINED&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
