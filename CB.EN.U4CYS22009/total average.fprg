@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="nunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 02:20:17 PM"/>
+        <attribute name="created" value="bnVubmE7QVNSSVRBOzIwMjItMTItMDk7MTA6NTc6MjIgQU07MjI2MA=="/>
+        <attribute name="edited" value="bnVubmE7QVNSSVRBOzIwMjItMTItMDk7MDI6MjA6MTcgUE07MjsyMzc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring variables"/>
+            <declare name="n, i, totalloop" type="Integer" array="False" size=""/>
+            <comment text="taking input from the user of number of students "/>
+            <output expression="&quot;enetr the number of students&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="declaring variables rollnumber ,marks,total,average"/>
+            <declare name="rollnumber" type="String" array="True" size="n"/>
+            <declare name="sub1marks, sub2marks, sub3marks, sub4marks, sub5marks, total, average" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <comment text="marks are taken as input"/>
+                <output expression="&quot;enter student&quot; &amp; i &amp; &quot;roll number&quot;" newline="True"/>
+                <input variable="rollnumber[i]"/>
+                <output expression="&quot;enter sub1marks&quot;" newline="True"/>
+                <input variable="sub1marks[i]"/>
+                <output expression="&quot;enter sub2marks&quot;" newline="True"/>
+                <input variable="sub2marks[i]"/>
+                <output expression="&quot;enter sub3marks&quot;" newline="True"/>
+                <input variable="sub3marks[i]"/>
+                <output expression="&quot;enter sub4marks&quot;" newline="True"/>
+                <input variable="sub4marks[i]"/>
+                <output expression="&quot;enter sub5marks&quot;" newline="True"/>
+                <input variable="sub5marks[i]"/>
+                <comment text="total is calculted"/>
+                <assign variable="total[i]" expression="sub1marks[i]+sub2marks[i]+sub3marks[i]+sub4marks[i]+sub5marks[i]"/>
+                <comment text="average is calculated"/>
+                <assign variable="average[i]" expression="total[i]/5"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <comment text="output is shown"/>
+                <output expression="&quot;Roll Number : &quot; &amp; rollnumber[i] &amp;&quot;,&quot;  &amp;&#13;&#10;&quot;Subject 1 marks : &quot; &amp; Sub1Marks[i]&amp;&quot;,&quot;  &amp;&#13;&#10;&quot;Subject 2 marks : &quot; &amp; Sub2Marks[i]&amp;&quot;,&quot;   &amp;&#13;&#10;&quot;Subject 3 marks : &quot; &amp; Sub3Marks[i]&amp;&quot;,&quot;   &amp;&#13;&#10;&quot;Subject 4 marks : &quot; &amp; Sub4Marks[i]&amp;&quot;,&quot;   &amp;&#13;&#10;&quot;Subject 5 marks : &quot; &amp; Sub5Marks[i]&amp;&quot;,&quot;   &amp;&#13;&#10;&quot;Total : &quot; &amp; Total[i] &amp;&quot;,&quot; &amp;&#13;&#10;&quot;Average : &quot; &amp; average[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

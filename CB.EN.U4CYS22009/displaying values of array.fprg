@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="nunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:45:58 AM"/>
+        <attribute name="created" value="bnVubmE7QVNSSVRBOzIwMjItMTItMDk7MDk6MTk6MzYgQU07MjI3MQ=="/>
+        <attribute name="edited" value="bnVubmE7QVNSSVRBOzIwMjItMTItMDk7MDk6NDU6NTggQU07MzsyMzg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring variables"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="numbers" type="Integer" array="True" size="10"/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <comment text="asking the user to in[ut the values"/>
+                <output expression="&quot;enter the value for the index =[&quot;&amp;index&amp;&quot;]&quot;" newline="True"/>
+                <comment text="input is taken"/>
+                <input variable="number"/>
+                <assign variable="numbers[index]" expression="number"/>
+            </for>
+            <comment text="statement that array contents is dipslayed"/>
+            <output expression="&quot;array contents&quot;" newline="True"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <comment text="output is shown that the values entered"/>
+                <output expression="&quot;array contents[&quot;&amp;index&amp;&quot;]=&quot;&amp;numbers[index]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

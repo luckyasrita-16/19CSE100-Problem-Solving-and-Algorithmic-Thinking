@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="nunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 02:47:13 PM"/>
+        <attribute name="created" value="bnVubmE7QVNSSVRBOzIwMjItMTItMDk7MDI6MDg6MTAgUE07MjI2OQ=="/>
+        <attribute name="edited" value="bnVubmE7QVNSSVRBOzIwMjItMTItMDk7MDI6NDc6MTMgUE07MTsyMzgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="program to find frequency of a given number in an array"/>
+            <comment text="declare variables"/>
+            <declare name="size, i, number, frequency" type="Integer" array="False" size=""/>
+            <comment text="get array size&#13;&#10;"/>
+            <output expression="&quot;enter array size&quot;" newline="True"/>
+            <input variable="size"/>
+            <declare name="array" type="Integer" array="True" size="size"/>
+            <comment text="input array"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;size">
+                <output expression="&quot;enter element number&quot; &amp; i+1" newline="True"/>
+                <input variable="array[i]"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <comment text="get element to find frequency for"/>
+            <output expression="&quot;enter the element you wan to find frequency for&quot;" newline="True"/>
+            <input variable="number"/>
+            <comment text="initialize frequency"/>
+            <assign variable="frequency" expression="0"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <if expression="array[i]=number">
+                    <then>
+                        <assign variable="frequency" expression="frequency+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="display final result"/>
+            <output expression="&quot;given element&quot; &amp; number &amp; &quot; ocuurs &quot; &amp; frequency &amp; &quot;times&quot;" newline="True"/>
+            <comment text="end program"/>
+        </body>
+    </function>
+</flowgorithm>
