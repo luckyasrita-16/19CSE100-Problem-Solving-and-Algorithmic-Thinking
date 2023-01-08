@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="nunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-08 02:39:26 PM"/>
+        <attribute name="created" value="bnVubmE7QVNSSVRBOzIwMjMtMDEtMDg7MTE6Mzk6NTYgQU07MjI2Ng=="/>
+        <attribute name="edited" value="bnVubmE7QVNSSVRBOzIwMjMtMDEtMDg7MDI6Mzk6MjYgUE07MTsyMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;welcome to karur vysya bank&quot;" newline="True"/>
+            <output expression="&quot;please enter the number of customers&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="name, nameoffriend, accountnumber" type="String" array="True" size="n"/>
+            <declare name="amountwithdrawn, depositamount, balance, balancenew" type="Real" array="True" size="n"/>
+            <declare name="pin, pinenter, choose" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;enter the name for &quot; &amp; i" newline="True"/>
+                <input variable="name[i]"/>
+                <output expression="&quot;enter the accountnumber for &quot; &amp; i" newline="True"/>
+                <input variable="accountnumber[i]"/>
+                <output expression="&quot;enter your balance for &quot; &amp; i" newline="True"/>
+                <input variable="balance[i]"/>
+                <output expression="&quot;enter your pin number for &quot; &amp; i" newline="True"/>
+                <input variable="pin[i]"/>
+                <if expression="balance[i]&gt;=500">
+                    <then>
+                        <output expression="&quot;please choose &quot; &amp; &quot; 1.withdraw , 2.deposit , 3.refer a friend&quot;" newline="True"/>
+                        <input variable="choose[i]"/>
+                        <if expression="choose[i]=1">
+                            <then>
+                                <output expression="&quot;thanks for choosing the withdraw option&quot;" newline="True"/>
+                                <output expression="&quot;please enter your pin&quot;" newline="True"/>
+                                <input variable="pinenter[i]"/>
+                                <if expression="pinenter[i]=pin[i]">
+                                    <then>
+                                        <output expression="&quot;enter the amount to be withdrawn&quot;" newline="True"/>
+                                        <input variable="amountwithdrawn[i]"/>
+                                        <if expression="amountwithdrawn[i]&lt;=balance[i]">
+                                            <then>
+                                                <assign variable="balancenew[i]" expression="balance[i]-amountwithdrawn[i]"/>
+                                                <if expression="balancenew[i]&gt;=500">
+                                                    <then>
+                                                        <output expression="&quot;your current balance is &quot; &amp; balancenew[i]" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;enter valid amount&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;please enter valid amount&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Invalid. Please enter valid pin&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="choose[i]=2">
+                                    <then>
+                                        <output expression="&quot;thanks for choosing the deposit option&quot;" newline="True"/>
+                                        <output expression="&quot;please enter your pin&quot;" newline="True"/>
+                                        <input variable="pinenter[i]"/>
+                                        <if expression="pinenter[i]=pin[i]">
+                                            <then>
+                                                <output expression="&quot;enter the amount to be deposited&quot;" newline="True"/>
+                                                <input variable="depositamount[i]"/>
+                                                <assign variable="balancenew[i]" expression="depositamount[i]+balance[i]"/>
+                                                <if expression="balancenew[i]&gt;=500">
+                                                    <then>
+                                                        <output expression="&quot;your current balance is &quot; &amp; balancenew[i]" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;please enetr valid amount&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Invalid. Please enter valid pin&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="choose[i]=3">
+                                            <then>
+                                                <declare name="j" type="Integer" array="False" size=""/>
+                                                <declare name="amounttobeadded" type="Integer" array="True" size="j"/>
+                                                <output expression="&quot;please enter the number of  friends you  have reffered&quot;" newline="True"/>
+                                                <input variable="j"/>
+                                                <assign variable="amounttobeadded" expression="balance[i] + j(50)"/>
+                                                <assign variable="balancenew[i]" expression="amounttobeadded[i]+balance[i]"/>
+                                                <output expression="&quot;your current balance is &quot; &amp; balancenew[i]" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;please select output between 1 or 2 or 3&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;invalid balance.&quot; &amp;  &quot;please enter balance if more than 500&quot;" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Thanks for visiting our bank.&quot; &amp; &quot;Please visit our bank oncemore&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
