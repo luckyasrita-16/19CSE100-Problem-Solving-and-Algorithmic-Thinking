@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="nunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-06 09:04:10 PM"/>
+        <attribute name="created" value="bnVubmE7QVNSSVRBOzIwMjMtMDEtMDY7MDg6MzM6NDMgUE07MjI3NQ=="/>
+        <attribute name="edited" value="bnVubmE7QVNSSVRBOzIwMjMtMDEtMDY7MDk6MDQ6MTAgUE07MTsyMzc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fib" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of fibonacci series u want to be printed&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="fib" expression="fibo(n)"/>
+        </body>
+    </function>
+    <function name="fibo" type="Integer" variable="c">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fibo" type="Integer" array="False" size=""/>
+            <declare name="i, a, b, c" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <output expression="a" newline="True"/>
+            <output expression="b" newline="True"/>
+            <for variable="i" start="1" end="n-2" direction="inc" step="1">
+                <assign variable="c" expression="a+b"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="c"/>
+                <output expression="c" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

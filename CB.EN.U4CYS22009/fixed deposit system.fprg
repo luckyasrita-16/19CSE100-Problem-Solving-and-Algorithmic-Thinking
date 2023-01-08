@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="nunna"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-07 11:25:08 PM"/>
+        <attribute name="created" value="bnVubmE7QVNSSVRBOzIwMjMtMDEtMDc7MDk6MjY6NDkgUE07MjI4NQ=="/>
+        <attribute name="edited" value="bnVubmE7QVNSSVRBOzIwMjMtMDEtMDc7MTE6MjU6MDggUE07MzsyMzgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="deposit1" type="Real" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of customers&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="principle" type="Real" array="True" size="n"/>
+            <declare name="finalamount" type="Real" array="True" size="n"/>
+            <declare name="tenure" type="Integer" array="True" size="n"/>
+            <assign variable="deposit1" expression="deposit(n,principle,tenure)"/>
+        </body>
+    </function>
+    <function name="deposit" type="Real" variable="finalamount">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="principle" type="Real" array="True"/>
+            <parameter name="tenure" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="finalamount" type="Real" array="True" size="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;enter the principle for &quot; &amp; i" newline="True"/>
+                <input variable="principle[i]"/>
+                <output expression="&quot;enter the tenure for &quot; &amp; i" newline="True"/>
+                <input variable="tenure[i]"/>
+                <if expression="tenure[i]=1">
+                    <then>
+                        <assign variable="finalamount[i]" expression="principle[i]+(3/100)*principle[i]"/>
+                    </then>
+                    <else>
+                        <if expression="tenure[i]=2">
+                            <then>
+                                <assign variable="finalamount[i]" expression="principle[i]+(3/100)*principle[i]"/>
+                                <assign variable="finalamount[i]" expression="principle[i]+(4/100)*principle[i]"/>
+                            </then>
+                            <else>
+                                <if expression="tenure[i]=3">
+                                    <then>
+                                        <assign variable="finalamount[i]" expression="principle[i]+(3/100)*principle[i]"/>
+                                        <assign variable="finalamount[i]" expression="principle[i]+(4/100)*principle[i]"/>
+                                        <assign variable="finalamount[i]" expression="principle[i]+(5/100)*principle[i]"/>
+                                    </then>
+                                    <else>
+                                        <if expression="tenure[i]=4">
+                                            <then>
+                                                <assign variable="finalamount[i]" expression="principle[i]+(3/100)*principle[i]"/>
+                                                <assign variable="finalamount[i]" expression="principle[i]+(4/100)*principle[i]"/>
+                                                <assign variable="finalamount[i]" expression="principle[i]+(5/100)*principle[i]"/>
+                                                <assign variable="finalamount[i]" expression="principle[i]+(5.5/100)*principle[i]"/>
+                                            </then>
+                                            <else>
+                                                <if expression="tenure[i]&gt;=5">
+                                                    <then>
+                                                        <assign variable="finalamount[i]" expression="principle[i]+(3/100)*principle[i]"/>
+                                                        <assign variable="finalamount[i]" expression="principle[i]+(4/100)*principle[i]"/>
+                                                        <assign variable="finalamount[i]" expression="principle[i]+(5/100)*principle[i]"/>
+                                                        <assign variable="finalamount[i]" expression="principle[i]+(5.5/100)*principle[i]"/>
+                                                        <assign variable="finalamount[i]" expression="principle[i]+(6/100)*principle[i]"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;the final amount for customer &quot; &amp; i &amp; &quot; is &quot; &amp; finalamount[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
