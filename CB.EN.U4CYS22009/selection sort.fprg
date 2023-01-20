@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22032"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:48:41 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAzMjsyMDIyMjNNQVlDMDA0OTsyMDIzLTAxLTIwOzEwOjM3OjE3IEFNOzMwNTc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAzMjsyMDIyMjNNQVlDMDA0OTsyMDIzLTAxLTIwOzEwOjQ4OjQxIEFNOzE7MzE2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring variables"/>
+            <declare name="pos, i, swap, j, n" type="Integer" array="False" size=""/>
+            <comment text="size of array is taken as input"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <comment text="taking input of every number in array"/>
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                <assign variable="pos" expression="i"/>
+                <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                    <comment text="checking the unsorted array for the smallest element to swap"/>
+                    <if expression="a[j]&lt;a[pos]">
+                        <then>
+                            <assign variable="pos" expression="j"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="pos!=i">
+                    <then>
+                        <comment text="swapping numbers"/>
+                        <assign variable="swap" expression="a[i]"/>
+                        <assign variable="a[i]" expression="a[pos]"/>
+                        <assign variable="a[pos]" expression="swap"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <comment text="printing the output which shows ascending order of the array"/>
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

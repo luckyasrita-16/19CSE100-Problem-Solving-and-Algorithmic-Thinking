@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22032"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:17:45 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAzMjsyMDIyMjNNQVlDMDA0OTsyMDIzLTAxLTIwOzA5OjE5OjIxIEFNOzMwNjA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAzMjsyMDIyMjNNQVlDMDA0OTsyMDIzLTAxLTIwOzEwOjE3OjQ1IEFNOzE7MzE2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, j, smallest, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;enter the value for &quot; &amp; i" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="0" end="n-2" direction="inc" step="1">
+                    <if expression="a[j]&lt;a[j+1]">
+                        <then/>
+                        <else>
+                            <assign variable="smallest" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[j+1]"/>
+                            <assign variable="a[j+1]" expression="smallest"/>
+                        </else>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
